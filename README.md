@@ -18,7 +18,8 @@
 - Обучение чтению.
 - Помощь в онлайн-обучении.
 - Телеграм: [@ketarond](https://t.me/ketarond)
+- ВК Группа: [ИСКРА](https://vk.com/iskra_lit_rus)
 
 ## 👤 Техническая реализация
 Сайт разработан [Maxim Astrakhantsev](https://github.com/DrSeedon).
-Original repo: [web_portfolio](https://github.com/DrSeedon/web_portfolio)
+Repository: [web_portfolio_Ekaterina](https://github.com/DrSeedon/web_portfolio_Ekaterina)

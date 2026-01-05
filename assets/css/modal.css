@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(125, 23, 15, 0.95);
     z-index: 2000;
     overflow-y: auto;
     backdrop-filter: blur(15px);
@@ -13,12 +13,12 @@
 
 .modal-content {
     position: relative;
-    background: var(--card-bg);
+    background: var(--bg-color);
     margin: 40px auto;
     width: 90%;
     max-width: 1200px;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(252, 249, 217, 0.1);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -27,13 +27,13 @@
     top: 25px;
     right: 30px;
     font-size: 2.5rem;
-    color: var(--text-dim);
+    color: var(--text-main);
     cursor: pointer;
     z-index: 10;
     transition: 0.3s;
 }
 
-.close-modal:hover { color: var(--accent); }
+.close-modal:hover { opacity: 0.7; }
 
 .modal-body {
     display: flex;
@@ -47,14 +47,14 @@
     position: relative;
     border-radius: 24px;
     overflow: hidden;
-    background: #000;
+    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border: 1px solid rgba(252, 249, 217, 0.05);
 }
 
 /* Spinner Loader */
@@ -63,12 +63,12 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-top-color: var(--accent);
+    border: 3px solid rgba(252, 249, 217, 0.1);
+    border-top-color: var(--text-main);
     border-radius: 50%;
     animation: spin 1s linear infinite;
     z-index: 1;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .modal-gallery.loading::before {
@@ -116,19 +116,20 @@
 }
 
 #modal-year {
+    font-family: 'Palatino Linotype', serif;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--accent);
+    color: var(--text-main);
+    opacity: 0.8;
 }
 
 #modal-title {
-    font-size: 3.5rem;
+    font-family: 'Palatino Linotype', serif;
+    font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-main);
 }
 
 .modal-details {
@@ -144,11 +145,10 @@
 }
 
 .modal-text h4 {
-    color: var(--accent);
+    color: var(--text-main);
     margin: 2rem 0 1rem;
     font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .modal-text li {
@@ -166,13 +166,12 @@
 
 .modal-tags span {
     padding: 0.5rem 1.2rem;
-    background: rgba(124, 58, 237, 0.1);
-    border: 1px solid rgba(124, 58, 237, 0.2);
+    background: rgba(252, 249, 217, 0.1);
+    border: 1px solid rgba(252, 249, 217, 0.2);
     border-radius: 100px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.5px;
+    color: var(--text-main);
 }
 
 .modal-links {
@@ -191,163 +190,4 @@
     
     #modal-title { font-size: 2.5rem; }
     #modal-year { font-size: 1.2rem; }
-}
-
-/* Archive Modal Specifics */
-.archive-modal-content {
-    max-width: 1000px;
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.archive-body {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
-    overflow-y: auto;
-}
-
-.archive-header {
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.archive-header h2 {
-    font-size: 2.5rem;
-    margin: 0;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-}
-
-.archive-header h2 span[data-i18n] {
-    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.archive-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.archive-item {
-    display: grid;
-    grid-template-columns: 160px 1fr auto;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-}
-
-.archive-item:hover {
-    background: rgba(124, 58, 237, 0.08);
-    border-color: var(--accent);
-    transform: translateX(10px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.archive-thumb {
-    width: 160px;
-    height: 100px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #000;
-}
-
-.archive-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.archive-thumb.no-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.02);
-}
-
-.archive-item:hover .archive-thumb img {
-    transform: scale(1.1);
-}
-
-.archive-year {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 800;
-    font-size: 0.9rem;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
-    opacity: 0.8;
-}
-
-.archive-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.4rem;
-    letter-spacing: -0.5px;
-}
-
-.archive-info p {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    font-weight: 500;
-}
-
-.archive-action {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-dim);
-    transition: 0.3s;
-}
-
-.archive-item:hover .archive-action {
-    background: var(--accent);
-    color: white;
-    transform: rotate(-45deg);
-}
-
-/* Hide scrollbar for cleaner look but keep functionality */
-.archive-body::-webkit-scrollbar {
-    width: 6px;
-}
-
-.archive-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.archive-body::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-.archive-body::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
-}
-
-@media (max-width: 768px) {
-    .archive-item {
-        grid-template-columns: 80px 1fr;
-        gap: 1.5rem;
-    }
-    .archive-thumb {
-        width: 80px;
-        height: 60px;
-    }
-    .archive-action {
-        display: none;
-    }
 }

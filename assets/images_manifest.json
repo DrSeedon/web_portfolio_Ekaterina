@@ -1,6 +1,37 @@
 {
-    "case_1": [],
-    "case_2": [],
-    "case_3": [],
-    "case_4": []
+    "case_1": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+    ],
+    "case_2": [
+        "image20.jpg"
+    ],
+    "case_3": [
+        "image1.jpg",
+        "image12.jpg",
+        "image15.jpg",
+        "image16.jpg",
+        "image23.jpg",
+        "image25.jpg"
+    ],
+    "case_4": [
+        "image18.jpg",
+        "image19.jpg",
+        "image22.jpg",
+        "image5.jpg",
+        "image6.jpg",
+        "image7.jpg",
+        "image9.jpg"
+    ],
+    "case_5": [
+        "image2.jpg"
+    ],
+    "case_6": [
+        "image14.png",
+        "image21.png"
+    ],
+    "case_7": [
+        "image17.png"
+    ]
 }

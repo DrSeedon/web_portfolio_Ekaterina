@@ -114,11 +114,11 @@ nav .container {
 }
 
 .lang-toggle .toggle-label.active {
-    color: white;
+    color: var(--bg-color);
 }
 
-.lang-toggle.is-en .toggle-label.en { color: white; }
-.lang-toggle:not(.is-en) .toggle-label.ru { color: white; }
+.lang-toggle.is-en .toggle-label.en { color: var(--bg-color); }
+.lang-toggle:not(.is-en) .toggle-label.ru { color: var(--bg-color); }
 
 /* Hero */
 .hero {

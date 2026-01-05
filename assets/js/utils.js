@@ -79,7 +79,7 @@ export function setupFAQ() {
 
 function gatherResumeData() {
     const tr = translations[getCurrentLang()] || translations.ru;
-    const name = "Екатерина Степанова";
+    const name = "Екатерина Евгеньевна";
     
     let data = `========================================\n`;
     data += `${name.toUpperCase()}\n`;

@@ -52,6 +52,8 @@ export const translations = {
         review_1_author: "— Пересдача ЕГЭ",
         review_2_text: "\"ОГЭ сдан на 30 баллов из 33, получен красный аттестат. Спасибо за системный подход!\"",
         review_2_author: "— Ученица 9 класса",
+        review_3_text: "\"Экзамен по литературе сдан на 91 балл! Поступила на филфак, как и мечтала. Ментальные карты — это супер.\"",
+        review_3_author: "— ЕГЭ по литературе",
         
         stack_title: "🛠️ Инструменты обучения",
         close: "Закрыть",
@@ -110,6 +112,8 @@ export const translations = {
         review_1_author: "— Exam Retake",
         review_2_text: "\"OGE passed with 30/33 points, got a red diploma. Thanks for the systematic approach!\"",
         review_2_author: "— 9th grade student",
+        review_3_text: "\"Literature exam passed with 91 points! Got into the Philology faculty. Mind maps are the best.\"",
+        review_3_author: "— EGE Literature student",
         
         stack_title: "🛠️ Learning Tools",
         close: "Close",

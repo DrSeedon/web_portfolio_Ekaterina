@@ -92,7 +92,7 @@ function renderPortfolio() {
     const container = document.getElementById('portfolio-grid');
     if (!container) return;
     
-    const entries = Object.entries(projectsData).filter(([_, data]) => data.priority);
+    const entries = Object.entries(projectsData);
     
     if (entries.length === 0) {
         container.innerHTML = '<p style="text-align:center; grid-column:1/-1; opacity:0.5;">Кейсы скоро появятся...</p>';
