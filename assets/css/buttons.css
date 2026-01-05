@@ -1,0 +1,129 @@
+/* Universal Button System */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid transparent;
+    gap: 0.5rem;
+}
+
+/* Primary Action (Hero, Major Links) */
+.btn--primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 15px 35px -10px rgba(124, 58, 237, 0.5);
+}
+
+.btn--primary:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 45px -10px rgba(124, 58, 237, 0.6);
+}
+
+/* Secondary Action (Archive, Minor Links) */
+.btn--secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+}
+
+/* Icon Buttons (Social, Controls) */
+.btn--icon {
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    border-radius: 12px;
+}
+
+.btn--icon:hover {
+    background: rgba(124, 58, 237, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-5px);
+}
+
+/* Slider/Modal Navigation Buttons */
+.btn--nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    padding: 0;
+}
+
+.btn--nav:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+.modal-controls .btn--nav {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.05);
+}
+
+.modal-controls .btn--nav:hover {
+    background: var(--accent);
+}
+
+/* Copy Button & Ghost Text */
+.copy-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+#copy-all-data {
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.ghost-text {
+    position: absolute;
+    left: calc(100% + 15px);
+    white-space: nowrap;
+    color: var(--accent);
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+.ghost-text.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}

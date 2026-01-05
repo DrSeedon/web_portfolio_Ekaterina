@@ -1,0 +1,7 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="450" fill="#16161a"/>
+    <path d="M360 185H440V265H360V185Z" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    <path d="M360 235L385 210L400 235L415 220L440 245" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    <circle cx="380" cy="205" r="5" stroke="#7c3aed" stroke-width="2" opacity="0.6"/>
+    <text x="400" y="300" text-anchor="middle" fill="#e1e1e6" font-family="monospace" font-size="16" font-weight="bold" letter-spacing="2" opacity="0.8">COMING SOON</text>
+</svg>
