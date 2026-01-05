@@ -6,10 +6,10 @@ export const translations = {
         nav_faq: "FAQ",
         
         hero_badge: "Репетитор • Русский язык • Литература",
-        hero_name: "Екатерина <span class=\"highlight\">Степанова</span>",
+        hero_name: "Екатерина <span class=\"highlight\">Евгеньевна</span>",
         hero_subtitle: "Репетитор по русскому языку и литературе с 2021 года. Подготовка к ОГЭ/ЕГЭ, обучение чтению и помощь в онлайн-обучении.",
         hero_cta: "Записаться на пробное",
-        hero_projects: "Портфолио",
+        hero_projects: "Истории успеха",
         
         expertise_title: "🚀 Экспертиза и Достижения",
         exp_years: "Опыт с 2021",
@@ -47,7 +47,7 @@ export const translations = {
         contact_copy: "Скопировать реквизиты",
         copy_success: "Скопировано!",
         
-        reviews_title: "💬 Отзывы",
+        reviews_title: "Отзывы",
         review_1_text: "\"За 2 недели подготовки улучшили результат почти в 2 раза! С 37 до 63 баллов. Это невероятно.\"",
         review_1_author: "— Пересдача ЕГЭ",
         review_2_text: "\"ОГЭ сдан на 30 баллов из 33, получен красный аттестат. Спасибо за системный подход!\"",
@@ -55,7 +55,7 @@ export const translations = {
         
         stack_title: "🛠️ Инструменты обучения",
         close: "Закрыть",
-        page_title: "Екатерина Степанова | Репетитор по русскому и литературе"
+        page_title: "Екатерина Евгеньевна | Репетитор по русскому и литературе"
     },
     en: {
         nav_about: "About",
@@ -64,10 +64,10 @@ export const translations = {
         nav_faq: "FAQ",
         
         hero_badge: "Tutor • Russian • Literature",
-        hero_name: "Ekaterina <span class=\"highlight\">Stepanova</span>",
+        hero_name: "Ekaterina <span class=\"highlight\">Evgenyevna</span>",
         hero_subtitle: "Tutor of Russian language and literature since 2021. Preparation for OGE/EGE, reading skills, and online learning support.",
         hero_cta: "Book Trial Lesson",
-        hero_projects: "Portfolio",
+        hero_projects: "Success Stories",
         
         expertise_title: "🚀 Expertise & Achievements",
         exp_years: "Since 2021",
@@ -105,7 +105,7 @@ export const translations = {
         contact_copy: "Copy Details",
         copy_success: "Copied!",
         
-        reviews_title: "💬 Reviews",
+        reviews_title: "Reviews",
         review_1_text: "\"Improved results almost 2x in just 2 weeks! From 37 to 63 points. Incredible.\"",
         review_1_author: "— Exam Retake",
         review_2_text: "\"OGE passed with 30/33 points, got a red diploma. Thanks for the systematic approach!\"",
@@ -113,6 +113,6 @@ export const translations = {
         
         stack_title: "🛠️ Learning Tools",
         close: "Close",
-        page_title: "Ekaterina Stepanova | Russian & Literature Tutor"
+        page_title: "Ekaterina Evgenyevna | Russian & Literature Tutor"
     }
 };

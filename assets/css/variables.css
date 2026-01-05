@@ -1,11 +1,11 @@
 :root {
-    --bg-color: #fdfbf7;
-    --card-bg: #ffffff;
-    --text-main: #2d3436;
-    --text-dim: #636e72;
-    --accent: #7a9a8c;
-    --accent-glow: rgba(122, 154, 140, 0.15);
-    --secondary: #d1ccc0;
+    --bg-color: #7D170F;
+    --card-bg: rgba(252, 249, 217, 0.05);
+    --text-main: #FCF9D9;
+    --text-dim: rgba(252, 249, 217, 0.7);
+    --accent: #FCF9D9;
+    --accent-glow: rgba(252, 249, 217, 0.1);
+    --secondary: #FCF9D9;
     --container-width: 1100px;
     --nav-height: 80px;
 }

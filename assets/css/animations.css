@@ -18,7 +18,7 @@
     width: 120vw;
     height: 120vw;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(122, 154, 140, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(252, 249, 217, 0.03) 0%, transparent 70%);
     filter: blur(150px);
     animation: bgFloat 40s infinite alternate ease-in-out;
     top: -30%;
@@ -63,8 +63,8 @@
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: -5;
-    mix-blend-mode: multiply;
-    opacity: 0.5;
+    mix-blend-mode: screen;
+    opacity: 0.3;
 }
 
 /* Scroll Reveal */

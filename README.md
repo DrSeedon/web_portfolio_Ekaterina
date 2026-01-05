@@ -1,15 +1,24 @@
-# DrSeedon Portfolio
+# Екатерина Евгеньевна — Репетитор по русскому и литературе
 
-Personal portfolio website for Maxim Astrakhantsev (DrSeedon).
-Senior Unity Developer | Immersive Solutions Architect | AI/ML Engineer.
+Современный сайт-портфолио для презентации образовательных услуг, демонстрации успехов учеников и записи на занятия.
 
 ## 🚀 Live Demo
-[Check it out on GitHub Pages](https://drseedon.github.io/web_portfolio/) (once deployed)
+[Посмотреть на GitHub Pages](https://drseedon.github.io/web_portfolio_Ekaterina/)
 
-## 🛠️ Tech Stack
-- HTML5 / CSS3 / JavaScript
-- Lucide Icons
-- Inter & JetBrains Mono fonts
+## 🛠️ Стек технологий
+- **HTML5 / CSS3 (BEM)** — адаптивная и чистая верстка.
+- **JavaScript (ES6+)** — динамический рендеринг кейсов и модальные окна.
+- **Lucide Icons** — современные иконки.
+- **Palatino Linotype** — основной шрифт для создания академической атмосферы.
+- **i18n (RU/EN)** — полная поддержка двух языков.
 
-## 👤 Author
-Maxim Astrakhantsev - [@DrSeedon](https://t.me/DrSeedon)
+## 👩‍🏫 О контенте
+Екатерина Евгеньевна — Профессиональный репетитор.
+- Подготовка к ОГЭ/ЕГЭ.
+- Обучение чтению.
+- Помощь в онлайн-обучении.
+- Телеграм: [@ketarond](https://t.me/ketarond)
+
+## 👤 Техническая реализация
+Сайт разработан [Maxim Astrakhantsev](https://github.com/DrSeedon).
+Original repo: [web_portfolio](https://github.com/DrSeedon/web_portfolio)
