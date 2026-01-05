@@ -95,25 +95,37 @@ export function setupCopyButton() {
     if (!btn) return;
 
     btn.onclick = async () => {
-        const data = gatherResumeData();
-        try {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                await navigator.clipboard.writeText(data);
-            } else {
-                const textArea = document.createElement("textarea");
-                textArea.value = data;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-            }
+        const shareData = {
+            title: 'Екатерина Евгеньевна — Репетитор по русскому и литературе',
+            text: 'Репетитор по русскому языку и литературе. Подготовка к ОГЭ/ЕГЭ.',
+            url: window.location.href
+        };
 
-            if (ghost) {
-                ghost.classList.add('active');
-                setTimeout(() => ghost.classList.remove('active'), 2500);
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                // Fallback to clipboard
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(window.location.href);
+                } else {
+                    const textArea = document.createElement("textarea");
+                    textArea.value = window.location.href;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                }
+                
+                if (ghost) {
+                    ghost.classList.add('active');
+                    setTimeout(() => ghost.classList.remove('active'), 2500);
+                }
             }
         } catch (err) {
-            console.error('Copy failed:', err);
+            if (err.name !== 'AbortError') {
+                console.error('Share/Copy failed:', err);
+            }
         }
     };
 }

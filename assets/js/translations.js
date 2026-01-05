@@ -8,7 +8,7 @@ export const translations = {
         hero_badge: "Репетитор • Русский язык • Литература",
         hero_name: "Екатерина <span class=\"highlight\">Евгеньевна</span>",
         hero_subtitle: "Репетитор по русскому языку и литературе с 2021 года. Подготовка к ОГЭ/ЕГЭ, обучение чтению и помощь в онлайн-обучении.",
-        hero_cta: "Записаться на пробное",
+        hero_cta: "Записаться на занятие",
         hero_projects: "Истории успеха",
         
         expertise_title: "🚀 Экспертиза и Достижения",
@@ -44,8 +44,8 @@ export const translations = {
         faq_a3: "Да, перенос возможен не позднее чем за 24 часа до начала урока.",
         
         contact_title: "📞 Контакты",
-        contact_copy: "Скопировать реквизиты",
-        copy_success: "Скопировано!",
+        contact_copy: "Поделиться профилем",
+        copy_success: "Ссылка скопирована!",
         
         reviews_title: "Отзывы",
         review_1_text: "\"За 2 недели подготовки улучшили результат почти в 2 раза! С 37 до 63 баллов. Это невероятно.\"",
@@ -68,7 +68,7 @@ export const translations = {
         hero_badge: "Tutor • Russian • Literature",
         hero_name: "Ekaterina <span class=\"highlight\">Evgenyevna</span>",
         hero_subtitle: "Tutor of Russian language and literature since 2021. Preparation for OGE/EGE, reading skills, and online learning support.",
-        hero_cta: "Book Trial Lesson",
+        hero_cta: "Book a Lesson",
         hero_projects: "Success Stories",
         
         expertise_title: "🚀 Expertise & Achievements",
@@ -104,8 +104,8 @@ export const translations = {
         faq_a3: "Yes, at least 24 hours before the lesson.",
         
         contact_title: "📞 Contacts",
-        contact_copy: "Copy Details",
-        copy_success: "Copied!",
+        contact_copy: "Share Profile",
+        copy_success: "Link copied!",
         
         reviews_title: "Reviews",
         review_1_text: "\"Improved results almost 2x in just 2 weeks! From 37 to 63 points. Incredible.\"",
