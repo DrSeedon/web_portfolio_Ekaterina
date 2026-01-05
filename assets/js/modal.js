@@ -8,24 +8,21 @@ let currentModalImgIdx = 0;
 let openedFromArchive = false;
 
 export function setupModals() {
+    if (!modal) return;
+
     // Open project modal
     document.addEventListener('click', (e) => {
         const card = e.target.closest('.project-card');
         if (card && !e.target.closest('.slider-controls') && !e.target.closest('.project-link')) {
             const projId = card.dataset.project;
-            if (projId) {
-                // Check if we are opening from inside the archive
-                if (e.target.closest('#archive-modal')) {
-                    openedFromArchive = true;
-                } else {
-                    openedFromArchive = false;
-                }
+            if (projId && projectsData[projId]) {
+                openedFromArchive = !!e.target.closest('#archive-modal');
                 openModal(projId);
             }
         }
 
         // Open archive modal
-        if (e.target.id === 'view-all-btn' || e.target.closest('#view-all-btn')) {
+        if (archiveModal && (e.target.id === 'view-all-btn' || e.target.closest('#view-all-btn'))) {
             openedFromArchive = false;
             openArchive();
         }
@@ -36,7 +33,7 @@ export function setupModals() {
     if (closeProjectBtn) {
         closeProjectBtn.onclick = () => {
             modal.style.display = 'none';
-            if (openedFromArchive) {
+            if (openedFromArchive && archiveModal) {
                 archiveModal.style.display = 'block';
                 openedFromArchive = false;
             } else {
@@ -46,27 +43,29 @@ export function setupModals() {
     }
 
     // Close archive modal
-    const closeArchiveBtn = archiveModal.querySelector('.close-archive');
-    if (closeArchiveBtn) {
-        closeArchiveBtn.onclick = () => {
-            archiveModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            openedFromArchive = false;
-        };
+    if (archiveModal) {
+        const closeArchiveBtn = archiveModal.querySelector('.close-archive');
+        if (closeArchiveBtn) {
+            closeArchiveBtn.onclick = () => {
+                archiveModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                openedFromArchive = false;
+            };
+        }
     }
 
     // Close on click outside
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
-            if (openedFromArchive) {
+            if (openedFromArchive && archiveModal) {
                 archiveModal.style.display = 'block';
                 openedFromArchive = false;
             } else {
                 document.body.style.overflow = 'auto';
             }
         }
-        if (e.target === archiveModal) {
+        if (archiveModal && e.target === archiveModal) {
             archiveModal.style.display = 'none';
             document.body.style.overflow = 'auto';
             openedFromArchive = false;
@@ -77,19 +76,24 @@ export function setupModals() {
     const nextBtn = document.getElementById('modal-next');
 
     if (prevBtn) prevBtn.onclick = () => {
+        if (!currentModalProj) return;
         const imgs = projectsData[currentModalProj].images;
+        if (!imgs) return;
         currentModalImgIdx = (currentModalImgIdx > 0) ? currentModalImgIdx - 1 : imgs.length - 1;
         updateModalImage();
     };
 
     if (nextBtn) nextBtn.onclick = () => {
+        if (!currentModalProj) return;
         const imgs = projectsData[currentModalProj].images;
+        if (!imgs) return;
         currentModalImgIdx = (currentModalImgIdx < imgs.length - 1) ? currentModalImgIdx + 1 : 0;
         updateModalImage();
     };
 }
 
 export function openArchive() {
+    if (!archiveModal) return;
     renderArchive();
     archiveModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -108,7 +112,6 @@ function renderArchive() {
         const tags = (lang === 'en' ? (data.tags_en || data.tags) : data.tags).join(', ');
         const dateStr = lang === 'en' ? (data.year_en || data.year) : data.year;
         
-        // Handle missing images
         const hasImages = data.images && data.images.length > 0;
         const thumb = hasImages ? `assets/images/portfolio/${id}/${data.images[0]}` : 'assets/images/placeholder.svg';
         
@@ -136,8 +139,7 @@ function openModal(id) {
     const data = projectsData[id];
     if (!data) return;
     
-    // Close archive if it was open
-    archiveModal.style.display = 'none';
+    if (archiveModal) archiveModal.style.display = 'none';
     
     currentModalProj = id;
     currentModalImgIdx = 0;
@@ -148,11 +150,17 @@ function openModal(id) {
     const tags = lang === 'en' ? (data.tags_en || data.tags) : data.tags;
     const dateStr = lang === 'en' ? (data.year_en || data.year) : data.year;
 
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-year').innerText = dateStr;
-    document.getElementById('modal-full-desc').innerHTML = desc;
-    document.getElementById('modal-tags').innerHTML = tags.map(t => `<span>${t}</span>`).join('');
-    document.getElementById('modal-links').innerHTML = (data.links || []).map(l => 
+    const titleEl = document.getElementById('modal-title');
+    const yearEl = document.getElementById('modal-year');
+    const descEl = document.getElementById('modal-full-desc');
+    const tagsEl = document.getElementById('modal-tags');
+    const linksEl = document.getElementById('modal-links');
+
+    if (titleEl) titleEl.innerText = title;
+    if (yearEl) yearEl.innerText = dateStr;
+    if (descEl) descEl.innerHTML = desc;
+    if (tagsEl) tagsEl.innerHTML = tags.map(t => `<span>${t}</span>`).join('');
+    if (linksEl) linksEl.innerHTML = (data.links || []).map(l => 
         `<a href="${l.url}" class="btn btn--primary" target="_blank">${l.text} <i data-lucide="${l.icon}"></i></a>`
     ).join('');
 
@@ -169,32 +177,28 @@ function openModal(id) {
 }
 
 function updateModalImage() {
+    if (!currentModalProj) return;
     const data = projectsData[currentModalProj];
     const container = document.querySelector('.modal-slides');
     const gallery = document.querySelector('.modal-gallery');
     
     if(!container || !gallery) return;
 
-    // Reset container and hide loader if no images
     if (!data || !data.images?.length) {
         container.innerHTML = `<img src="assets/images/placeholder.svg" class="loaded" style="width:100%; height:100%; object-fit:contain; opacity:1;">`;
         gallery.classList.remove('loading');
         return;
     }
 
-    // Show loader
     gallery.classList.add('loading');
-    
     const imgPath = `assets/images/portfolio/${currentModalProj}/${data.images[currentModalImgIdx]}`;
     
-    // Preload image
     const tempImg = new Image();
     tempImg.onload = () => {
         container.innerHTML = `<img src="${imgPath}" class="loaded" style="width:100%; height:100%; object-fit:contain;">`;
         gallery.classList.remove('loading');
     };
     tempImg.onerror = () => {
-        console.error("Failed to load image:", imgPath);
         container.innerHTML = `
             <div style="display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--text-dim);">
                 <i data-lucide="image-off" style="width:40px; height:40px;"></i>

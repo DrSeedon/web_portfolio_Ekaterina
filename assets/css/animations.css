@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     z-index: -10;
-    background: #0a0a0c;
+    background: var(--bg-color);
     overflow: hidden;
     pointer-events: none;
 }
@@ -18,7 +18,7 @@
     width: 120vw;
     height: 120vw;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(122, 154, 140, 0.08) 0%, transparent 70%);
     filter: blur(150px);
     animation: bgFloat 40s infinite alternate ease-in-out;
     top: -30%;
@@ -26,7 +26,7 @@
 }
 
 .bg-animation::after {
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(209, 204, 192, 0.05) 0%, transparent 70%);
     width: 100vw;
     height: 100vw;
     animation-duration: 55s;
@@ -40,7 +40,7 @@
     position: absolute;
     width: 90vw;
     height: 90vw;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(122, 154, 140, 0.05) 0%, transparent 70%);
     filter: blur(180px);
     bottom: -20%;
     left: 10%;
@@ -56,20 +56,21 @@
 /* Cursor Glow Effect */
 .cursor-glow {
     position: fixed;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: -5;
-    mix-blend-mode: screen;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
 }
 
 /* Scroll Reveal */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
 }
 

@@ -6,19 +6,20 @@
 }
 
 .interest-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .interest-card:hover {
-    background: rgba(124, 58, 237, 0.05);
+    background: #ffffff;
     border-color: var(--accent);
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+    box-shadow: 0 15px 40px rgba(122, 154, 140, 0.15);
 }
 
 .interest-icon {
@@ -79,9 +80,10 @@
 }
 
 .timeline-item .time {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Lora', serif;
     color: var(--accent);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
@@ -96,17 +98,19 @@
 }
 
 .comp-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     border-radius: 20px;
     transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .comp-card:hover {
-    background: rgba(124, 58, 237, 0.03);
+    background: #ffffff;
     border-color: var(--accent);
     transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(122, 154, 140, 0.1);
 }
 
 .comp-card i {
@@ -125,12 +129,68 @@
 
 .soft-tags span {
     padding: 0.8rem 1.5rem;
-    background: rgba(0, 242, 254, 0.05);
-    border: 1px solid rgba(0, 242, 254, 0.1);
+    background: rgba(122, 154, 140, 0.05);
+    border: 1px solid rgba(122, 154, 140, 0.1);
     border-radius: 100px;
-    color: var(--secondary);
+    color: var(--accent);
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(122, 154, 140, 0.05);
+}
+
+.faq-question i {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+    color: var(--accent);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s;
+    padding: 0 2rem;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 1.5rem;
 }
 
 /* Portfolio Grid */
@@ -144,14 +204,16 @@
     background: var(--card-bg);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
     cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(122, 154, 140, 0.15);
 }
 
 .project-slider {
@@ -181,8 +243,9 @@
 .project-info { padding: 1.5rem; }
 
 .project-year {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--accent);
     margin-bottom: 0.5rem;
 }
@@ -270,7 +333,7 @@
 }
 
 .stack-item span {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
 }

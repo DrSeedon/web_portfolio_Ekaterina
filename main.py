@@ -10,7 +10,7 @@ import update_images
 import http.server
 import socketserver
 
-PORT = 8000
+PORT = 8001
 
 def start_server():
     # Change directory to the web_portfolio folder
