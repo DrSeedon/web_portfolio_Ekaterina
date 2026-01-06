@@ -14,8 +14,8 @@ export const translations = {
         expertise_title: "🚀 Экспертиза и Достижения",
         exp_years: "Опыт с 2021",
         exp_years_desc: "Успешная практика подготовки к экзаменам и обучения с нуля.",
-        exp_students: "Высокие баллы",
-        exp_students_desc: "Мои ученики сдают ЕГЭ на 90+ и получают красные аттестаты.",
+        exp_students: "Индивидуальный прогресс",
+        exp_students_desc: "Каждый ученик достигает своего максимума: от заветных 90+ на ЕГЭ до уверенного чтения первой книги.",
         exp_score: "91 балл",
         exp_score_desc: "Максимальный результат на ЕГЭ по литературе.",
         
@@ -26,8 +26,8 @@ export const translations = {
         format_groups_desc: "Эффективная подготовка в малых группах с элементами соревновательности.",
         format_intensives_title: "Экспресс-подготовка",
         format_intensives_desc: "Повышение результата в 2 раза за 2-3 недели перед пересдачей.",
-        format_target_title: "Target-курсы",
-        format_target_desc: "Подготовка к ОГЭ, ЕГЭ и итоговому сочинению с нуля.",
+        format_groups_list_title: "Групповые занятия",
+        format_groups_list_desc: "Обучение в небольших группах по общим целям и уровням подготовки.",
         
         success_title: "Истории успеха",
         success_section_title: "💎 Истории успеха",
@@ -37,7 +37,7 @@ export const translations = {
         
         faq_title: "❓ Часто задаваемые вопросы",
         faq_q1: "На каких платформах проходят занятия?",
-        faq_a1: "Мы используем Zoom, Google Meet или Discord для видеосвязи, а также интерактивные презентации и ментальные карты.",
+        faq_a1: "Мы используем Zoom для видеосвязи, а также интерактивные презентации, Holst, Flyvi и ментальные карты.",
         faq_q2: "Как происходит оплата?",
         faq_a2: "Оплата производится поурочно или пакетами занятий через СБП или банковский перевод.",
         faq_q3: "Можно ли перенести занятие?",
@@ -46,14 +46,6 @@ export const translations = {
         contact_title: "📞 Контакты",
         contact_copy: "Поделиться профилем",
         copy_success: "Ссылка скопирована!",
-        
-        reviews_title: "Отзывы",
-        review_1_text: "\"За 2 недели подготовки улучшили результат почти в 2 раза! С 37 до 63 баллов. Это невероятно.\"",
-        review_1_author: "— Пересдача ЕГЭ",
-        review_2_text: "\"ОГЭ сдан на 30 баллов из 33, получен красный аттестат. Спасибо за системный подход!\"",
-        review_2_author: "— Ученица 9 класса",
-        review_3_text: "\"Экзамен по литературе сдан на 91 балл! Поступила на филфак, как и мечтала. Ментальные карты — это супер.\"",
-        review_3_author: "— ЕГЭ по литературе",
         
         stack_title: "🛠️ Инструменты обучения",
         close: "Закрыть",
@@ -74,8 +66,8 @@ export const translations = {
         expertise_title: "🚀 Expertise & Achievements",
         exp_years: "Since 2021",
         exp_years_desc: "Successful practice in exam prep and teaching from scratch.",
-        exp_students: "High Scores",
-        exp_students_desc: "My students pass exams with 90+ and get red diplomas.",
+        exp_students: "Individual Progress",
+        exp_students_desc: "Every student reaches their own peak: from the coveted 90+ on exams to confidently reading their first book.",
         exp_score: "91 Points",
         exp_score_desc: "Maximum result on the Literature State Exam.",
         
@@ -86,8 +78,8 @@ export const translations = {
         format_groups_desc: "Effective preparation in small groups with competitive elements.",
         format_intensives_title: "Express Prep",
         format_intensives_desc: "Improving results 2x in 2-3 weeks before retakes.",
-        format_target_title: "Target Courses",
-        format_target_desc: "Preparation for OGE, EGE, and Final Essay from scratch.",
+        format_groups_list_title: "Group Classes",
+        format_groups_list_desc: "Learning in small groups based on common goals and levels.",
         
         success_title: "Success Stories",
         success_section_title: "💎 Success Stories",
@@ -97,7 +89,7 @@ export const translations = {
         
         faq_title: "❓ Frequently Asked Questions",
         faq_q1: "What platforms are used?",
-        faq_a1: "Zoom, Google Meet, or Discord, plus interactive presentations and mind maps.",
+        faq_a1: "We use Zoom for video calls, plus interactive presentations, Holst, Flyvi and mind maps.",
         faq_q2: "How is payment handled?",
         faq_a2: "Per lesson or in packages via bank transfer.",
         faq_q3: "Can I reschedule?",
@@ -106,14 +98,6 @@ export const translations = {
         contact_title: "📞 Contacts",
         contact_copy: "Share Profile",
         copy_success: "Link copied!",
-        
-        reviews_title: "Reviews",
-        review_1_text: "\"Improved results almost 2x in just 2 weeks! From 37 to 63 points. Incredible.\"",
-        review_1_author: "— Exam Retake",
-        review_2_text: "\"OGE passed with 30/33 points, got a red diploma. Thanks for the systematic approach!\"",
-        review_2_author: "— 9th grade student",
-        review_3_text: "\"Literature exam passed with 91 points! Got into the Philology faculty. Mind maps are the best.\"",
-        review_3_author: "— EGE Literature student",
         
         stack_title: "🛠️ Learning Tools",
         close: "Close",

@@ -243,7 +243,7 @@
 .project-slider {
     position: relative;
     height: 250px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .project-slider .slides { height: 100%; }
